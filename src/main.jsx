@@ -7,7 +7,7 @@ import App from './App.jsx'
 import ContactUs from './pages/Contactus/contactUs.jsx';
 import AboutUs from './pages/about/About.jsx';
 import Home from './pages/Home.jsx';
-import Terms from './pages/Terms/terms.jsx';
+import Terms from './pages/Terms/Terms.jsx';
 import Login from './pages/Login/Login.jsx';
 import Portfolio from './pages/portfolio/portfolio.jsx';
 import Services from './pages/Services/Service.jsx';
