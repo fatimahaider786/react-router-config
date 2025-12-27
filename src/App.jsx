@@ -29,8 +29,8 @@ function App() {
         Login
       </NavLink>
       <br />
-        <NavLink to="/portfolio" end>
-        portfolio
+        <NavLink to="/Portfolio" end>
+        Portfolio
       </NavLink>
            <br />
         <NavLink to="/Service" end>
