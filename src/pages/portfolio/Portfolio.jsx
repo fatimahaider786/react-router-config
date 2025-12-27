@@ -1,4 +1,3 @@
-import "./Portfolio.jsx"
 
 const Portfolio = () => {
     return <div className="bg-amber-200 text-black"> 

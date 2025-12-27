@@ -8,10 +8,9 @@ import ContactUs from './pages/Contactus/contactUs.jsx';
 import AboutUs from './pages/about/About.jsx';
 import Home from './pages/Home.jsx';
 import Terms from './pages/Terms/terms.jsx';
-import Help from './pages/Help.jsx';
 import Login from './pages/Login/Login.jsx';
 import Portfolio from './pages/portfolio/portfolio.jsx';
-import Service from './pages/Services/Service.jsx';
+import Services from './pages/Services/Service.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -24,7 +23,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/Terms" element={<Terms/>} />
       <Route path="/Login" element={<Login/>}/>
       <Route path="/Portfolio" element={<Portfolio/>}/>
-      <Route path="/Service" element={<Service/>}/>
+      <Route path="/Service" element={<Services/>}/>
 
 
 
