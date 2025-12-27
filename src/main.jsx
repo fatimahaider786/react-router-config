@@ -9,7 +9,9 @@ import Home from "./pages/Home.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Services from "./pages/Services/Service.jsx";
 import Help from "./pages/Help.jsx";
+import Terms from "./pages/Terms/Terms.jsx";
 
+import Portfolio from "./pages/portfolio/portfolio.jsx";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
@@ -18,9 +20,12 @@ createRoot(document.getElementById("root")).render(
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/about" element={<AboutUs />} />
       <Route path="/help" element={<Help />} />
-      <Route path="/Terms" element={<Termsms />} />
       <Route path="/login" element={<Login />} />
       <Route path="/service" element={<Services />} />
+      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/Terms" element={<Terms />} />
+
+
     </Routes>
   </BrowserRouter>
 );
