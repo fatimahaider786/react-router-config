@@ -1,6 +1,11 @@
-import "./AboutUs.css"
+import React from 'react';
 
-const AboutUs =()=>{
-    return <div className="pink"> My name is Fatima haider. I am the student of AI Full stack.</div>
-}
-export default AboutUs
+const About = () => {
+  return (
+    <div className="text-black bg-red-400"  >
+      My name is Fatima Haider. I am a student of AI Full Stack.
+    </div>
+  );
+};
+
+export default About; 

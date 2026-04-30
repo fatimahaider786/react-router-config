@@ -1,42 +1,26 @@
-import "./App.css";
-import { NavLink } from "react-router";
+import { NavLink, Outlet } from "react-router";
 
 function App() {
   return (
-    <>
-      <h1 className="bg-amber-800 p-3.5">This is routing</h1>
-      <NavLink to="/contact" end>
-        Contact Us
-      </NavLink>
-      <br />
-          <NavLink to="/About" end>
-        AboutUs
-      </NavLink>
-      <br />
-        <NavLink to="/Home" end>
-        Home
-      </NavLink>
-      <br />
-        <NavLink to="/Help" end>
-        Help
-      </NavLink>
-       <br />
-        <NavLink to="/Terms" end>
-        Terms
-      </NavLink>
-       <br />
-        <NavLink to="/Login" end>
-        Login
-      </NavLink>
-      <br />
-        <NavLink to="/Portfolio" end>
-        Portfolio
-      </NavLink>
-           <br />
-        <NavLink to="/Service" end>
-        Service
-      </NavLink>
-    </>
+    <div className="bg-pink-950 p-5">
+      <h1 className="text-white text-2xl mb-4">Navigation Menu</h1>
+      
+      <nav className="flex flex-wrap gap-4 mb-10">
+        <NavLink to="/" className={({isActive}) => isActive ? "text-white font-bold" : "text-gray-300"}>Home</NavLink>
+        <NavLink to="/about" className={({isActive}) => isActive ? "text-white font-bold" : "text-gray-300"}>About</NavLink>
+        <NavLink to="/contact" className={({isActive}) => isActive ? "text-white font-bold" : "text-gray-300"}>Contact Us</NavLink>
+        <NavLink to="/login" className={({isActive}) => isActive ? "text-white font-bold" : "text-gray-300"}>Login</NavLink>
+        <NavLink to="/portfolio" className={({isActive}) => isActive ? "text-white font-bold" : "text-gray-300"}>Portfolio</NavLink>
+        <NavLink to="/services" className={({isActive}) => isActive ? "text-white font-bold" : "text-gray-300"}>Services</NavLink>
+        <NavLink to="/terms" className={({isActive}) => isActive ? "text-white font-bold" : "text-gray-300"}>Terms</NavLink>
+        <NavLink to="/help" className={({isActive}) => isActive ? "text-white font-bold" : "text-gray-300"}>Help</NavLink>
+      </nav>
+
+
+      <div className="p-4 bg-white rounded-lg shadow-md">
+        <Outlet />
+      </div>
+    </div>
   );
 }
 

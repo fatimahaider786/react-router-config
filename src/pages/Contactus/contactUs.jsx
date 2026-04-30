@@ -1,6 +1,4 @@
-
-
-const ContactUs =()=>{
-    return <div className="blue">ContactUs</div>
+const Contact =()=>{
+    return <div className="bg-amber-700">Is number par contact kar skta hain ap agr koi bhi issue ho 📲 </div>
 }
-export default ContactUs
+export default Contact

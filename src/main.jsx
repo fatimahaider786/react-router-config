@@ -1,31 +1,62 @@
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import { BrowserRouter, Routes, Route } from "react-router";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+import { createBrowserRouter, RouterProvider } from "react-router";
 
-import App from "./App.jsx";
-import ContactUs from "./pages/Contactus/ContactUs.jsx";
-import AboutUs from "./pages/about/About.jsx";
-import Home from "./pages/Home.jsx";
+// Pages Import
+import About from "./pages/About/About.jsx";
+import Contact from "./pages/Contactus/Contact.jsx";
 import Login from "./pages/Login/Login.jsx";
+import Portfolio from "./pages/Portfolio/Portfolio.jsx";
 import Services from "./pages/Services/Service.jsx";
-import Help from "./pages/Help.jsx";
 import Terms from "./pages/Terms/Terms.jsx";
+import Help from "./pages/Help.jsx";
+import Home from "./pages/Home.jsx";
 
-import Portfolio from "./pages/portfolio/portfolio.jsx";
-createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/contact" element={<ContactUs />} />
-      <Route path="/about" element={<AboutUs />} />
-      <Route path="/help" element={<Help />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/service" element={<Services />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/terms" element={<Terms/>} />
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />, 
+    children: [
+      {
+        path: "", 
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "portfolio",
+        element: <Portfolio />,
+      },
+      {
+        path: "services",
+        element: <Services />,
+      },
+      {
+        path: "terms",
+        element: <Terms />,
+      },
+      {
+        path: "help",
+        element: <Help />,
+      },
+    ],
+  },
+]);
 
-
-    </Routes>
-  </BrowserRouter>
-);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)
